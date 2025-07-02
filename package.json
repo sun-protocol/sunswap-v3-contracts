@@ -26,6 +26,8 @@
     "@uniswap/sdk": "^3.0.3",
     "@uniswap/v2-core": "1.0.1",
     "@uniswap/v3-core": "^1.0.1",
+    "@uniswap/v3-periphery": "1.4.1",
+    "base58": "^2.0.1",
     "dotenv": "^16.4.7",
     "ethers": "^6.13.5"
   }
