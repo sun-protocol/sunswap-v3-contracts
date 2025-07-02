@@ -1,0 +1,30 @@
+name: ubuntu test
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Build and Test ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - name: Foundry install
+        uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: nightly  # or "nightly"
+      - name: Install Vyper
+        run: |
+            pip install vyper==0.2.8
+
+      - name: build 
+        run: |
+            pnpm install
+            pnpm run compile
