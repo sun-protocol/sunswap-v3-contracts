@@ -5,12 +5,12 @@
 ### compile
 
 ```sh
-$ truffle compile
+$ pnpm run compile
 ```
 
 ### deploy
 
 ```sh
-$ tronbox migrate --f 2 --to 2 --network nile
+$ pnpm run deploy-tron
 ```
 
