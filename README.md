@@ -2,8 +2,6 @@
 
 This repository contains the v3-core and v3-periphery smart contracts for the Sunswap V3 Protocol.
 
-## About
-### Sunswap V3 Core
 SunSwap V3 Core is the foundational contract library of SunSwap V3, a decentralized exchange built on the TRON blockchain.  
 It introduces **concentrated liquidity**, allowing liquidity providers to allocate capital within specific price ranges rather than across the entire spectrum. This design improves capital efficiency and enables providers to earn higher returns in volatile ranges.  
 
@@ -14,7 +12,6 @@ The core contracts implement:
 
 By combining concentrated liquidity with TRON’s high-performance infrastructure, SunSwap V3 Core delivers a more efficient and customizable AMM model, enhancing both trading execution and liquidity provider strategies.  
 
-### Sunswap V3 Periphery
 SunSwap V3 Periphery provides the higher-level contracts and interfaces that simplify interaction with the SunSwap V3 Core.  
 While the Core contracts implement the fundamental AMM logic (liquidity management and swaps), the Periphery contracts are designed to make these operations more user-friendly and accessible.  
 
