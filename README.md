@@ -22,7 +22,7 @@ Key components include:
 
 Together, the Periphery contracts bridge the gap between low-level protocol logic and end-user applications, enabling wallets, dApps, and integrators to interact with SunSwap V3 efficiently and securely.
 
-
+---
 ## SunSwap Core
 
 This `v3-core` contains the core contracts of v3, namely v3Pool, which implements the liquidity management and swap operations of the v3 trading pool.
@@ -35,7 +35,7 @@ The `v3-periphery` contains the `NonfungiblePositionManager` contract to manage 
 
 `NftPositionDescriptor` used to describe the nft with positon infomations.
 `SwapRouter` provides interfaces related to token swaps.
-
+---
 ## SunSwap V3 Deploments：
 
 | contract                   | chain        | address                            |
@@ -50,7 +50,7 @@ The `v3-periphery` contains the `NonfungiblePositionManager` contract to manage 
 |                            | NILE Testnet | TUcM2gkpWEJxBpkweLdVoRp6DAUsw2vWR6 |
 | TickLens                   | TRON Mainnet | TBBjWiPHouzEx2QRjBzTw9EA8YjG43XiAi |
 |                            | NILE Testnet | TXWuk11iagFK2qAWbBsP58A5ncU5L1LYq5 |
-
+---
 ## SunSwap V3 tron deployment：
 
 ### compile
@@ -64,9 +64,12 @@ $ pnpm run compile
 ```sh
 $ pnpm run deploy-tron
 ```
-## Community
+---
+## Community & Support
 
-If you have any questions about this project, or wish to engage with us:
+If you have questions about this project, find bugs, or would like to contribute, you can reach the team and community via:
 
 - [Telegram](https://t.me/SunIO_Defi)
 - [Twitter](https://twitter.com/defi_sunio)
+
+Please follow official announcements from these channels for the latest information on deployments, upgrades, and security notices.
