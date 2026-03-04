@@ -1,4 +1,4 @@
-# SunSwao v3
+# SunSwap v3 Protocol
 
 This repository contains the v3-core and v3-periphery smart contracts for the Sunswap V3 Protocol.
 
@@ -64,3 +64,9 @@ $ pnpm run compile
 ```sh
 $ pnpm run deploy-tron
 ```
+## Community
+
+If you have any questions about this project, or wish to engage with us:
+
+- [Telegram](https://t.me/SunIO_Defi)
+- [Twitter](https://twitter.com/defi_sunio)
