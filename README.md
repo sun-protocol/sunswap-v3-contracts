@@ -71,7 +71,7 @@ export PRIVATE_KEY_NILE='Your private key'
 Then run:
 
 ```bash
-npm run migrate
+npm run deploy-tron
 ```
 
 This will:
