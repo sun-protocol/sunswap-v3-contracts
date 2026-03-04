@@ -22,7 +22,6 @@ Key components include:
 
 Together, the Periphery contracts bridge the gap between low-level protocol logic and end-user applications, enabling wallets, dApps, and integrators to interact with SunSwap V3 efficiently and securely.
 
----
 
 ## SunSwap Core
 
@@ -36,6 +35,10 @@ The `v3-periphery` contains the `NonfungiblePositionManager` contract to manage 
 
 `NftPositionDescriptor` used to describe the nft with positon infomations.
 `SwapRouter` provides interfaces related to token swaps.
+
+## Improvements Over V2
+
+SunSwap V3 introduces a concept called concentrated capital efficiency. This mechanism empowers liquidity providers to concentrate their funds within a specific price range, thereby allowing them to provide liquidity more effectively and earn higher rewards within a price range featuring high price volatility.
 
 ---
 
@@ -95,6 +98,16 @@ This will:
 
 ---
 
+## Documentation
+
+This project provides comprehensive resources to help developers understand the contract architecture, integrate with the protocol, and ensure secure usage. The documentation covers contract mechanism and functions.
+
+- [Overview](https://docs.sun.io/DEVELOPERS/Swap/V3Protocol/Overview)
+
+- [Functions](https://docs.sun.io/DEVELOPERS/Swap/V3Protocol/V3Functions)
+
+
+---
 ## Community & Support
 
 If you have questions about this project, find bugs, or would like to contribute, you can reach the team and community via:
