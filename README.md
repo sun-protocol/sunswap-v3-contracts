@@ -60,7 +60,7 @@ The `v3-periphery` contains the `NonfungiblePositionManager` contract to manage 
 
 ### Deploying to Nile TestNet
 
-You can deploy the SunSwap 1.5 **factory** and **value aggregator** contracts to the TRON Nile TestNet using the provided scripts.
+You can deploy the SunSwap v3 **Factory** and **NonfungiblePositionManager** contracts to the TRON Nile TestNet using the provided scripts.
 
 First, export your private key for the Nile TestNet account (use a **test** account, never a production key):
 
