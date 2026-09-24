@@ -31,7 +31,8 @@ or rewritten as part of this transition.
 
 Create a new release branch from GitHub `main`, then import the selected GitLab stable
 revision and open its release PR. Once protected, additional release-branch updates
-use a `sync/*` PR. Branch creation is limited to the designated release maintainers.
+use a `sync/*` PR. Both the development team and the release-maintainer team may
+create `release/*` branches from GitHub `main`.
 Do not overwrite an existing release branch or retarget an existing PR without
 reviewing its purpose and coordinating with its author.
 
@@ -49,10 +50,12 @@ The following policy applies to `main`, `release/*`, and any retained `develop` 
 GitHub enforces the PR, two-approval, stale-approval dismissal, last-push approval,
 conversation-resolution, force-push, and deletion rules for these branches, with no
 review-rule bypass actors. Only the designated release-maintainer team can update
-these branches through PRs and create `release/*` branches. Its exception to the
-update restriction applies only through a PR; it cannot bypass the separate review
-requirements. The development team can push unprotected feature branches, open PRs,
-and participate in reviews. `main` is the default branch.
+existing protected branches through PRs. Its exception to the update restriction
+applies only through a PR; it cannot bypass the separate review requirements.
+Both the development team and the release-maintainer team may create `release/*`
+branches. This creation permission does not grant direct updates or merge authority.
+The development team can also push unprotected feature branches, open PRs, and
+participate in reviews. `main` is the default branch.
 This document and PR checkboxes do not themselves enforce GitHub permissions.
 
 Prefer merge commits for release synchronization so release lineage remains traceable.
