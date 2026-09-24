@@ -21,5 +21,5 @@ For a release, verify reproducibility and relevant integration/regression covera
 - [ ] Relevant checks pass and limitations are disclosed.
 - [ ] Two non-author reviewers approve the final revision.
 - [ ] All review conversations and blocking feedback are resolved.
-- [ ] An authorized release maintainer will merge the PR.
+- [ ] The merger is authorized for the target branch: `contract-dev` or `contract-maintain` for `release/*`; only `contract-maintain` for `main` or retained `develop`.
 - [ ] Tags, GitHub releases, deployments, and package publications are tracked separately, if applicable.
