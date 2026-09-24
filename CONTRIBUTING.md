@@ -44,16 +44,18 @@ The following policy applies to `main`, `release/*`, and any retained `develop` 
 - At least **two reviewers other than the PR author** must approve the final changes.
 - Code-changing commits invalidate earlier approvals and require renewed review.
 - Resolve all review conversations and blocking feedback before merging.
-- Only the designated release-maintainer team may merge protected-branch PRs.
+- Both `contract-dev` and `contract-maintain` may merge PRs targeting `release/*`.
+- Only `contract-maintain` may merge PRs targeting `main` or retained `develop`.
 - Merge authority does not waive approvals, validation, or review of the final revision.
 
 GitHub enforces the PR, two-approval, stale-approval dismissal, last-push approval,
 conversation-resolution, force-push, and deletion rules for these branches, with no
-review-rule bypass actors. Only the designated release-maintainer team can update
-existing protected branches through PRs. Its exception to the update restriction
-applies only through a PR; it cannot bypass the separate review requirements.
-Both the development team and the release-maintainer team may create `release/*`
-branches. This creation permission does not grant direct updates or merge authority.
+review-rule bypass actors. Both `contract-dev` and `contract-maintain` may update
+`release/*` through PRs; only `contract-maintain` may update `main` or retained
+`develop` through PRs. These exceptions to update restrictions apply only through
+a PR and cannot bypass the separate review requirements. Both teams may create
+`release/*` branches from `main`; creation does not permit direct updates.
+The final `release/*` to `main` PR remains restricted to `contract-maintain`.
 The development team can also push unprotected feature branches, open PRs, and
 participate in reviews. `main` is the default branch.
 This document and PR checkboxes do not themselves enforce GitHub permissions.
