@@ -118,5 +118,5 @@ If you have questions about this project, find bugs, or would like to contribute
 Please follow official announcements from these channels for the latest information on deployments, upgrades, and security notices.
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the GitLab-first development model,
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the internal development and public release model,
 GitHub release synchronization, review requirements, and validation guidance.

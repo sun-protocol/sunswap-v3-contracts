@@ -5,7 +5,7 @@ Describe the problem and resulting behavior. For a release, specify `vX.Y.Z`.
 ## Release provenance and compatibility
 
 Identify the fixed source version using public-safe references. Record confidential
-GitLab links and full source provenance in the internal release record.
+internal links and full source provenance in the internal release record.
 Explain intentional GitHub differences, ABI/API impact, and companion release order.
 For GitHub-only documentation, state that no runtime release is included.
 
