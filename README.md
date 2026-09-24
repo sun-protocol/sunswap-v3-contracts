@@ -116,3 +116,7 @@ If you have questions about this project, find bugs, or would like to contribute
 - [Twitter](https://twitter.com/defi_sunio)
 
 Please follow official announcements from these channels for the latest information on deployments, upgrades, and security notices.
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the GitLab-first development model,
+GitHub release synchronization, review requirements, and validation guidance.
