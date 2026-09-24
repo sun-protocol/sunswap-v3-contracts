@@ -4,16 +4,17 @@ This guide describes the GitHub release workflow for SunSwap V3 Contracts.
 
 ## Development and release responsibilities
 
-GitLab is the primary development and integration platform. Complete routine feature,
-fix, review, and release validation there. GitHub receives a fixed version only after
-it has merged into GitLab's stable branch (`main` or `master`). GitHub is the public
+Routine development, integration, review, and release validation take place
+internally. GitHub receives a fixed version only after it has merged into the
+internal stable branch (`main` or `master`). GitHub is the public
 release and distribution surface; it is not a second day-to-day integration branch.
 
 Community contributors can open an issue or PR here. Maintainers coordinate functional
-changes with GitLab before including them in a GitHub release. Do not ask contributors
-to disclose private repository contents or obtain internal access to report an issue.
+changes through the internal integration process before including them in a GitHub
+release. Do not ask contributors to disclose private repository contents or obtain
+internal access to report an issue.
 GitHub-specific documentation and release metadata can use focused PRs into `main`;
-functional changes must retain an auditable GitLab release origin.
+functional changes must retain an auditable internal release origin.
 
 ## Branch model
 
@@ -24,12 +25,12 @@ or rewritten as part of this transition.
 | Branch | Purpose | Pull request target |
 | --- | --- | --- |
 | `main` | Reviewed public release source and release documentation | — |
-| `release/vX.Y.Z` | Staging and verification of a fixed GitLab release | `main` |
+| `release/vX.Y.Z` | Staging and verification of a fixed internal release | `main` |
 | `sync/<description>` | Reviewed updates to an existing release branch | `release/vX.Y.Z` |
 | `docs/<description>` | GitHub-specific documentation and metadata | `main` |
 | `develop` | Retained historical branch | No routine updates |
 
-Create a new release branch from GitHub `main`, then import the selected GitLab stable
+Create a new release branch from GitHub `main`, then import the selected internal stable
 revision and open its release PR. Once protected, additional release-branch updates
 use a `sync/*` PR. Both the development team and the release-maintainer team may
 create `release/*` branches from GitHub `main`.
@@ -68,7 +69,7 @@ existing workflow results and disclose failures; local validation remains requir
 
 ## Synchronize a release
 
-1. Select the fixed GitLab stable commit after its release review and validation.
+1. Select the fixed internal stable commit after its release review and validation.
    Record the full source SHA, version, corresponding dependency revisions, and compatibility
    requirements in the internal release record.
 2. Compare that source with GitHub `main` and any existing release PRs. GitHub-specific
@@ -84,10 +85,11 @@ existing workflow results and disclose failures; local validation remains requir
    release maintainer merges the final reviewed revision. Revalidate if the final
    integration changes the tested behavior.
 6. Create the immutable `vX.Y.Z` tag on the validated GitHub `main` commit and publish
-   GitHub release notes with compatible versions and artifacts. Record both GitLab
+   GitHub release notes with compatible versions and artifacts. Record both internal
    source SHA and GitHub release SHA in the internal release record; they may differ.
 7. Track deployments or package publications separately. Return any functional fix
-   discovered during GitHub review to GitLab and produce an updated fixed release source.
+   discovered during GitHub review to the internal development process and produce
+   an updated fixed release source.
 
 Never move or overwrite a release tag. Use a new version for corrections. Do not
 merge unrelated open PRs merely to make the repositories look identical.
@@ -108,7 +110,7 @@ Run targeted regression validation for changed behavior. The presence of a `test
 script is not evidence of an effective test suite; record the actual tests executed
 and coverage gaps. The existing `ubuntu test` workflow currently runs compilation,
 not a test command. Preserve existing workflow behavior unless changed in a separate,
-reviewed PR. Do not claim GitLab's build procedure validates this different checkout.
+reviewed PR. Do not claim the internal build procedure validates this different checkout.
 
 For behavior changes, cover exact-input and exact-output boundaries, rounding,
 insufficient liquidity, recipient/settlement handling, route encoding, and compatible
@@ -142,11 +144,11 @@ Use separately authorized release credentials and verify the destination before 
 
 ## Urgent fixes
 
-Fix the affected version through GitLab's hotfix process first. Once merged into the
-GitLab stable branch, synchronize the fixed patch release through a GitHub release PR
+Fix the affected version through the internal hotfix process first. Once merged into the
+internal stable branch, synchronize the fixed patch release through a GitHub release PR
 with the same approval and validation requirements. Do not quietly create a second
 source of truth by applying functional fixes only on GitHub. Track any deployment,
-consumer upgrade, and return of the fix to GitLab's active branches separately.
+consumer upgrade, and return of the fix to the internal active branches separately.
 
 ## Reporting security issues
 
