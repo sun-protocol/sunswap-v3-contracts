@@ -17,7 +17,7 @@ functional changes must retain an auditable GitLab release origin.
 
 ## Branch model
 
-The intended default branch is `main`. An existing `develop` branch is retained for
+The default branch is `main`. An existing `develop` branch is retained for
 history, not used for new development or release integration, and must not be deleted
 or rewritten as part of this transition.
 
@@ -46,10 +46,13 @@ The following policy applies to `main`, `release/*`, and any retained `develop` 
 - Only the designated release-maintainer team may merge protected-branch PRs.
 - Merge authority does not waive approvals, validation, or review of the final revision.
 
-These are the target repository rules. This document and PR checkboxes do not enforce
-GitHub permissions. An administrator must configure the matching protections and
-release-maintainer team; until then, the merger must verify these requirements manually.
-Do not assume that the current settings already implement every requirement.
+GitHub currently enforces the PR, two-approval, stale-approval dismissal, last-push
+approval, conversation-resolution, force-push, and deletion rules for these branches,
+with no review-rule bypass actors. Default-branch configuration is also complete.
+The release-maintainer-only merge restriction is still pending team configuration;
+until it is enabled, authorized collaborators may still be able to merge after the
+review requirements pass. Follow the team policy above during this transition.
+This document and PR checkboxes do not themselves enforce GitHub permissions.
 
 Prefer merge commits for release synchronization so release lineage remains traceable.
 Do not require linear history for a workflow that uses release merge commits. Squash
